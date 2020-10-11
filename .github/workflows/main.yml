@@ -18,7 +18,7 @@
         comment: true
         status: success
     failure:
-      github_conn:
+      github:
         comment: true
         status: failure
     merge-failure:
