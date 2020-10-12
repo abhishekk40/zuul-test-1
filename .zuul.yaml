@@ -17,14 +17,17 @@
       github:
         comment: true
         status: success
+      sqlreporter:
     failure:
       github:
         comment: true
         status: failure
+      sqlreporter:
     merge-failure:
       github:
         comment: true
         status: failure
+      sqlreporter:
     start:
       github:
         comment: true
