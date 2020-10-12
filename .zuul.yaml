@@ -41,7 +41,6 @@
         check: 'success'
         comment: false
         status: 'success'
-      sqlreporter:
     failure:
       github:
         check: 'failure'
