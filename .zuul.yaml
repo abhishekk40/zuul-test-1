@@ -40,14 +40,13 @@
       github:
         check: 'success'
         comment: false
-        #status: 'success'
+        status: 'success'
       sqlreporter:
     failure:
       github:
         check: 'failure'
         comment: false
-        #status: 'failure'
-      sqlreporter:
+        status: 'failure'
 
 
 - project:
