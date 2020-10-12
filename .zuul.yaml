@@ -17,7 +17,6 @@
       github:
         comment: true
         status: success
-      sqlreporter:
     failure:
       github:
         comment: true
@@ -33,7 +32,6 @@
     disabled:
       github:
         comment: true
-
 
 - project:
     name: abhishekk40/zuul-test-1
