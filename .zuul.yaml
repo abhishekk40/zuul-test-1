@@ -21,10 +21,12 @@
       github:
         comment: true
         status: failure
+      sqlreporter:
     merge-failure:
       github:
         comment: true
         status: failure
+      sqlreporter:
     start:
       github:
         comment: true
