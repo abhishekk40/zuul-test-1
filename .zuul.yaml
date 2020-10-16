@@ -34,4 +34,4 @@
 - job:
     name: base
     parent: null
-    pre-run: base-playbook.yaml
+    run: base-playbook.yaml
