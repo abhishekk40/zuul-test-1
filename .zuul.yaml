@@ -31,7 +31,4 @@
       jobs:
         - noop
 
-- job:
-    name: base
-    parent: null
-    run: base-playbook.yaml
+
