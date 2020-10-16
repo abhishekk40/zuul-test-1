@@ -35,4 +35,7 @@
 - job:
     name: base
     parent: null
-    pre-run: base-playbook.yaml
+    nodeset:
+      nodes:
+        - name: ubuntu-xenial
+          label: ubuntu-xenial
