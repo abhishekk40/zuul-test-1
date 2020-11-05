@@ -1,8 +1,8 @@
 - pipeline:
     name: check
     description: |
-      Newly opened pull requests enter this pipeline to receive an
-      initial verification
+      Newly uploaded patchsets enter in this pipeline, Changes that have been approved by core developers are enqueued
+      in order.
     manager: independent
     trigger:
       github:
@@ -16,15 +16,43 @@
           comment: (?i)^\s*recheck\s*$
     start:
       github:
-        status: pending
+        status: 'pending'
+        status-url: "http://localhost:9000/t/quickstart/status"
         comment: false
     success:
       github:
         status: 'success'
+     
     failure:
       github:
         status: 'failure'
+- pipeline:
+    name: post
+    post-review: true
+    description: This pipeline runs jobs that operate after each change proposed.
+    manager: independent
+    precedence: low
+    trigger:
+      github:
+        - event: push
+          ref: ^refs/heads/.*$
+    success:
+      github:
+        status: 'success'
+        merge: true
+        comment: true
+     
+    failure:
+      github:
+        status: 'failure'
+        comment: true
 
+
+
+
+
+
+   
 - project:
     name: abhishekk40/zuul-test-1
     check:
@@ -35,6 +63,7 @@
 - job:
     name: base
     parent: null
+    pre-run: base-playbook.yaml
     
      
     
